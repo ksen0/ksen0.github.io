@@ -37,12 +37,13 @@ h1 small {
 	padding:1px;
 	border:solid 1px #DDDDDD;
 }
-.body {
+body {
 	width:80%;
 	margin-left:10%;
 	margin-right:10%;
+	font-family:Helvetica sans-serif;
 }
-p {
+p, li {
 	color:#666666;
 }
 p strong, p em{
