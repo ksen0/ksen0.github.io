@@ -1,0 +1,12 @@
+---
+layout: post
+title: halllooo
+---
+
+h1. {{ page.title }}
+
+p(meta). 23 Oct 2008 - San Francisco
+
+hey hey
+
+para break
