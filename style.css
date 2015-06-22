@@ -1,3 +1,4 @@
+/* THIS IS A HOT MESS BUT IN MY DEFENSE I AM BUSY AND STUFF */
 
 h1 {
 	padding-top:30px;
@@ -77,7 +78,8 @@ li.bracket {
     border-bottom:solid 1px #ddd;
     border-left:solid 5px #ddd;
     margin-left:-10px;
-    margin-bottom:15px;
+    padding-bottom:10px;
+    margin-bottom:10px;
 }
 li {
     text-align: justify;
@@ -93,6 +95,23 @@ strong, em {
     font-weight: 900;
 }
 
-h2, h3, h1{
+h2, h1{
+    padding:0px;
+    margin-bottom:0px;
     font-family:"Julius Sans One";
+}
+
+h2 {
+    margin-top:150px;
+}
+.menu {
+    color:#888;
+}
+.menu a{
+    color:#555;
+}
+
+#footer{
+    padding-top:2000px;
+    padding-bottom:200px;
 }
