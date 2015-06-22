@@ -39,8 +39,8 @@ h1 small {
 body {
 	width:70%;
 	margin:auto;
-    font-family: Dosis;
-    font-weight: 200;
+    font-family: Lato;
+    font-weight: 300;
 }
 p, li {
 	color:#000000;
@@ -90,7 +90,7 @@ li ul>li {
 }
 
 strong, em {
-    font-weight: 700;
+    font-weight: 900;
 }
 
 h2, h3, h1{
