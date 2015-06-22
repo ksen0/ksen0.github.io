@@ -1,8 +1,7 @@
 
 h1 {
 	padding-top:30px;
-	text-align: center;
-	color:#aaaaaa;
+	color:#AAA;
 	font-size:3em;
 }
 h1 small {
@@ -38,15 +37,12 @@ h1 small {
 	border:solid 1px #DDDDDD;
 }
 body {
-	width:80%;
-	margin-left:10%;
-	margin-right:10%;
-	font-family:Helvetica sans-serif;
+	width:70%;
+	margin:auto;
+    font-family: Dosis;
+    font-weight: 200;
 }
 p, li {
-	color:#666666;
-}
-p strong, p em{
 	color:#000000;
 }
 p .date{
@@ -59,6 +55,44 @@ p .date.new{
 	background-color:#dd6666;
 }
 img{
-	padding-bottom:20px;
-	padding-left:20px;
+	border-bottom:solid 20px #fff;
+	border-left:solid 20px #fff;
+}
+
+ul, ol {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    margin-top:15px;
+}
+ul ul, ul ol{
+    margin-top:0px;
+    margin-left:30px;
+}
+li.bracket {
+    padding-top:7px;
+    margin-top:10px;
+    padding-left:5px;
+    border-top:solid 1px #ddd;
+    border-bottom:solid 1px #ddd;
+    border-left:solid 5px #ddd;
+    margin-left:-10px;
+    margin-bottom:10px;
+}
+li {
+    text-align: justify;
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+li ul>li {
+    text-indent: 25px;
+}
+
+strong, em {
+    font-weight: 700;
+}
+
+h2, h3, h1{
+    font-family:"Julius Sans One";
 }
