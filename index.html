@@ -4,6 +4,7 @@
   <title>Katerena Kuksenok</title>
   <link rel="stylesheet" href="tufte.css"/>
   <link rel="stylesheet" href="latex.css"/>
+  <script type="text/javascript" src="js/instafeed.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style type="text/css">
    table#newspaper-tone > thead > tr > th:first-child { padding-right: 20%; }
@@ -73,11 +74,36 @@
 <section>
 <h2>Getting in Touch</h2>
 <ul>
-    <li>Send me an email at <em>firstname.lastname@gmail.com</em>.</li>
-    <li>I travel quite a bit, but I maintain a page that is the most likely to be current and up to date on which city I am in: <a href=http://katerena.github.io/whereis/>katerena.github.io/whereis</a></li>
+    <li>Send me an email at <em>firstname.lastname@gmail.com</em></li>
 <li>Sign up for my no-more-than-monthly newsletter: <a href=http://tinyletter.com/katerena>tinyletter.com/katerena</a></li>
 <li>Check my sporadic blog of lengthy treatises: <a href=http://medium.com/@katerena>medium.com/@katerena</a></li>
 </ul>
+
+    <script>
+         
+    var feed = new Instafeed({
+        get: 'user',
+        limit: 7,
+        userId: 2221752207,
+        accessToken: '2221752207.467ede5.a6507581e9de4645821099a258d96887',
+          filter: function(image) {
+              cities = ["Seattle", "Vancouver", "Berlin"]
+              if(document.getElementById("lastSeen").innerHTML == ""){
+                    for (var i = 0; i < cities.length; i++) {
+                          if(image.location.name.indexOf(cities[i]) > -1){
+                              document.getElementById("lastSeen").innerHTML = "Last spotted: "+cities[i]+"!"
+                          }
+                    }
+              }
+              return 1;
+          },
+        clientId: '7513bdcc456747d794be3e258e4117a6',
+        template: '<a href="{{link}}"><img src="{{image}}" /></a>'
+    });
+    feed.run();
+    </script>
+<h2 id="lastSeen"></h2>
+<div id="instafeed"></div>
 </section>
   </article>
 
