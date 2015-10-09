@@ -87,15 +87,18 @@
         userId: 2221752207,
         accessToken: '2221752207.467ede5.a6507581e9de4645821099a258d96887',
           filter: function(image) {
-              cities = ["Seattle", "Vancouver", "Berlin"]
-              if(document.getElementById("lastSeen").innerHTML == ""){
-                    for (var i = 0; i < cities.length; i++) {
-                          if(image.location.name.indexOf(cities[i]) > -1){
-                              document.getElementById("lastSeen").innerHTML = "Last spotted: "+cities[i]+"!"
-                          }
+              
+              
+              if (image.tags.indexOf('whereisktk') >= 0) {
+                if(document.getElementById("lastSeen").innerHTML == ""){
+                    document.getElementById("lastSeen").innerHTML = "Last spotted in "+image.location.name;
                     }
+                  else if(document.getElementById("lastSeen").innerHTML.indexOf(image.location.name) == -1){
+                    document.getElementById("lastSeen").innerHTML += " & "+image.location.name+"!";
+                  }
+                  return 1;
               }
-              return 1;
+              return 0;
           },
         clientId: '7513bdcc456747d794be3e258e4117a6',
         template: '<a href="{{link}}"><img src="{{image}}" /></a>'
