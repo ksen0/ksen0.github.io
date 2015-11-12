@@ -20,6 +20,27 @@
                                           table#newspaper-tone > tbody > tr > td:nth-child(2) { padding-right: 0; }
                                           table#newspaper-tone > tbody > tr > td:nth-child(3) { padding-right: 0; }}
   </style>
+    
+      <style type="text/css" media="screen">
+        .gr_grid_container {
+          /* customize grid container div here. eg: width: 500px; */
+            width:180px;
+            position:relative;
+            left:-70px;
+            padding-left:-5px;
+            clear:both;
+        }
+
+        .gr_grid_book_container {
+          /* customize book cover container div here */
+          float: left;
+          width: 50px;
+          height: 60px;
+          margin: 4px;
+            border:solid 1px #333333;
+          overflow: hidden;
+        }
+      </style>
 </head>
 
 <body>
@@ -28,9 +49,6 @@
     <h1>Katerena Kuksenok</h1>
     <p class="subtitle"><small>Asker of Pretty Good Questions<br>Jack of (Almost Very Nearly) All Trades<br>Master of Science</bre></small></p>
     <section>
-          <div class="epigraph">
-                    <blockquote>The pursuit of mastery is an ever onward almost.
-                        <footer>Sarah Lewis, The Rise</blockquote></div>
       <p>I do research, about tech+society, using an intriguing mix of qualitative<label for="sn-qual" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-tufte-handout" class="margin-toggle"/>
         <span class="sidenote">
             <a href=http://blog.smartbear.com/development/a-developer-and-a-user-walk-into-a-bar-5-steps-to-getting-users-insights-while-avoiding-a-bruised-ego/>Interviews</a>, <a href=http://blog.smartbear.com/development/ask-stupid-questions-first-so-you-can-get-better-answers-later/>surveys</a>, ethnographic observation; <a href=https://medium.com/what-about/how-i-do-user-research-fabc89acc7c9>user research</a>
@@ -64,6 +82,7 @@ Harris, C. Aragon. Statistical Affect Detection in Collaborative Chat. CSCW 2013
 Affect in Collaborative Online Chat. SIGDOC 2012.</li>
 <li>J. Mankoff, K. Kuksenok, S. Kiesler, J. Rode, K. Waldman. Competing Online Viewpoints and Models of
 Chronic Illness. CHI 2011.</li></ul>
+
 <h3>How to be a human:</h3><ul>
 <li>medium.com/@katerena/ <a href=https://medium.com/compassionate-productivity/beware-the-irreverent-metaphorical-cheetos-f3e7ca3be885>Beware the Irreverent Metaphorical Cheetos</a> (Oct 2015) - There is something fascinating and unique about the machinations of Internet products on the human condition. In recent months, I’ve been experimenting with ways of moving through the physical world that mimics online movement, particularly its distraction.</li>
 <li>tinyletter.com/katerena/ <a href=http://tinyletter.com/katerena/letters/science-is-poetry-books-are-time-machines>Science is Poetry & Books are Time Machines</a> (Oct 2015) - Words that sought to enlighten about human history or nature of the universe and its myriad things - as I grew more capable of understanding them, these also grew into a kind of poetry, even if they don't realize it themselves. The poetry of humanity having a conversation with itself spanning thousands of years.</li>
@@ -78,13 +97,11 @@ Chronic Illness. CHI 2011.</li></ul>
     <li>medium.com/@katerena/ <a href=https://medium.com/screaming-godhead/i-killed-one-of-my-beans-ac38c248d726>I Killed One of My Beans</a> (Jul 2014) - inc. Hungary, Ukraine, Germany, Turkey, US</li>
 </ul>
 
-<h2>About me</h2>
+<h2>No Favorite Languages</h2>
 
-      <p><label for="mn-figure-1" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-figure-1" class="margin-toggle"/><span class="marginnote"><img src="http://katerena.github.io/img/rings.jpg"/>My fiance and I smithing our rings at Chaos Communication Camp. We both originally grew up in different parts of Ukraine and emigrated in our teens: I to the US, he to Germany. We met in Istanbul in 2014, and then - on a wild whim - spent a month together in Morocco. It's been an adventure since. (Berlin-ish '15)</p>
+      <p><label for="mn-figure-1" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-figure-1" class="margin-toggle"/><span class="marginnote"><img src="http://katerena.github.io/img/rings.jpg"/>My fiance and I smithing our rings at Chaos Communication Camp '15. We both originally grew up in different parts of Ukraine and emigrated in our teens: I to the US, he to Germany. We met in Istanbul and then - on a wild whim - spent a month together in Morocco. It's been an adventure since.</p>
 
-<p>My favorite things include, but are not limited to: reading slowly and carefully, and/or aloud to people; bicycling at night, especially with a clear sky and a fat moon;  poached eggs; poetry.</p>
-
-<p>I don't have a favorite programming language, but currently I'm using python and C++, in iPython Notebook and the Arduino IDE environments respectively, a lot. Something about relational databases has always made me smile, but they're not part of my life right now.</p>
+<p>I do not have a favorite programming language, but currently I'm using python and C++, in iPython Notebook and the Arduino IDE environments respectively, a lot. Something about relational databases has always made me smile, but they're not part of my life right now.</p>
 
 <p>I also do not have a favorite people-language, but I speak English, Russian, and Ukrainian with a native proficiency. I am actively learning German, because <em>ich muss nach Berlin gehen!</em> pretty soon. With less urgency, I'm brushing up on my Japanese, at which I used to proficient half a decade ago. And I've recently started learning basic reading/writing in Arabic.</p>
 
@@ -96,8 +113,6 @@ Chronic Illness. CHI 2011.</li></ul>
 <li>Sign up for my no-more-than-monthly newsletter: <a href=http://tinyletter.com/katerena>tinyletter.com/katerena</a></li>
 <li>Check my sporadic blog of lengthy treatises: <a href=http://medium.com/@katerena>medium.com/@katerena</a></li>
 </ul>
-
-      <p>Expect from me: (1) good questions and honest answers, (2) enthusiasm and entrepreneurial spirit, (3) challenge, critique, and empathy. I, in turn, expect to be held accountable for my claims.</p>
     </section>
 <section>
 
@@ -110,16 +125,9 @@ Chronic Illness. CHI 2011.</li></ul>
         userId: 2221752207,
         accessToken: '2221752207.467ede5.a6507581e9de4645821099a258d96887',
           filter: function(image) {
-              if (window.tot <= 0) return 0;
-              
-              if (image.tags.indexOf('whereisktk') >= 0) {
-                if(document.getElementById("lastSeen").innerHTML == ""){
-                    document.getElementById("lastSeen").innerHTML = "Last spotted in "+image.location.name;
-                    }
-                  else if(document.getElementById("lastSeen").innerHTML.indexOf(image.location.name) == -1){
-                    document.getElementById("lastSeen").innerHTML += " & "+image.location.name+"!";
-                  }
-                  window.tot --;
+              if(window.tot<=0) return 0;
+              if(image.tags.indexOf('osmosiszine') >= 0){
+                    window.tot--;
                   return 1;
               }
               return 0;
@@ -130,7 +138,7 @@ Chronic Illness. CHI 2011.</li></ul>
     feed.run();
     </script>
     
-<h2 id="lastSeen"></h2>
+<h2>Arts-in-progress: productivity issue of "osmosis" zine</h2>
 <div id="instafeed"></div>
 
 </section>
