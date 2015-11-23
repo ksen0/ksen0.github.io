@@ -105,29 +105,41 @@ Chronic Illness. CHI 2011.</li></ul>
 
     <script>
         
-    window.tot = 7;
-    var feed = new Instafeed({
-        get: 'user',
-        limit: 60,
-        userId: 2221752207,
-        accessToken: '2221752207.467ede5.a6507581e9de4645821099a258d96887',
-          filter: function(image) {
-              if(window.tot<=0) return 0;
-              if(image.tags.indexOf('workinprogress') >= 0){
-                    window.tot--;
-                  return 1;
-              }
-              return 0;
-          },
-        clientId: '7513bdcc456747d794be3e258e4117a6',
-        template: '<a href="{{link}}"><img src="{{image}}" /></a>'
-    });
-    feed.run();
+        function getFeed(f_target, f_caption, f_tot, f_tags){
+            return new Instafeed({
+                get: 'user',
+                limit: 60,
+                userId: 2221752207,
+                target: f_target,
+                accessToken: '2221752207.467ede5.a6507581e9de4645821099a258d96887',
+                  filter: function(image) {
+                      if(f_tot<=0){ console.log(f_target); return 0; }
+                      for (var i in f_tags) {
+                          if(image.tags.indexOf(f_tags[i]) >= 0){
+                                f_tot--;
+                              return 1;
+                          }
+                      }
+                      return 0;
+                  },
+                clientId: '7513bdcc456747d794be3e258e4117a6',
+                template: '<div style="float:left;width:150px;padding:1px;"><a href="{{link}}"><img src="{{image}}" /><br>'+f_caption+'</a></div>'
+            });
+        }
+        
+    getFeed("instafeed_ad", "{{likes}} likes", 6, ["art", "workinprogress"]).run();
+        
+        
+    getFeed("instafeed_tr","{{location}}", 6, ["travelphotos"]).run();
     </script>
     
-<h2>Recent Doodles & Sketches</h2>
+<h2>Art & Doodles</h2>
     <p>
-<div id="instafeed"></div>
+<div id="instafeed_ad"></div>
+</p>
+<h2 style="clear:both;padding-top:30px;">Travel</h2>
+    <p>
+<div id="instafeed_tr"></div>
 </p>
 </section>
   </article>
