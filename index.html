@@ -129,12 +129,19 @@
         }
         
     getFeed("instafeed_ad", "{{likes}} likes", 6, ["art", "workinprogress"]).run();
-        
-        
-    getFeed("instafeed_tr","{{location}}", 6, ["travelphotos"]).run();
+    getFeed("instafeed_tr","{{location}}", 6, ["travelphotos","travelphoto"]).run();
+    getFeed("instafeed_ws","{{location}}", 6, ["workspace","workspaces","coworking"]).run();
     </script>
     
+<<<<<<< Updated upstream
 <h2>Works-in-Progress</h2>
+=======
+<h2 style="clear:both;padding-top:30px;">Workspaces</h2>
+    <p>
+<div id="instafeed_ws"></div>
+</p>
+<h2>Art & Doodles</h2>
+>>>>>>> Stashed changes
     <p>
 <div id="instafeed_ad"></div>
 </p>
