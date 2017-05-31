@@ -20,12 +20,38 @@
                                           table#newspaper-tone > tbody > tr > td:nth-child(2) { padding-right: 0; }
                                           table#newspaper-tone > tbody > tr > td:nth-child(3) { padding-right: 0; }}
 	  
-.peerreviewed::before { 
+.peerreviewed::before {
     content: "peer-reviewed ";
-font-size:0.3em;
-font-family:monospace;
-color: #f442a7;
-	  }
+    font-size: 0.6em;
+    font-family: monospace;
+    color: #f442a7;
+    left: -30px;
+    /* top: +2px; */
+    position: absolute;
+.journal::before {
+    content: "journal ";
+    font-size: 0.6em;
+    font-family: monospace;
+    color: #f442a7;
+    left: -20px;
+    /* top: +2px; */
+    position: absolute;
+.top-5-perc::before {
+    content: "top 5% ";
+    font-size: 0.6em;
+    font-family: monospace;
+    color: #f442a7;
+    left: -18px;
+    /* top: +2px; */
+    position: absolute;
+.report::before {
+    content: "report ";
+    font-size: 0.6em;
+    font-family: monospace;
+    color: #f442a7;
+    left: -18px;
+    /* top: +2px; */
+    position: absolute;
   </style>
 </head>
 
