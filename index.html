@@ -2,6 +2,7 @@
 <head>
   <meta charset="utf-8"/>
   <title>K. Kuksenok</title>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="tufte.css"/>
   <link rel="stylesheet" href="latex.css"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,14 +19,69 @@
                                           table#newspaper-tone > tbody > tr > td:nth-child(1) { padding-right: 0; }
                                           table#newspaper-tone > tbody > tr > td:nth-child(2) { padding-right: 0; }
                                           table#newspaper-tone > tbody > tr > td:nth-child(3) { padding-right: 0; }}
+	  
+.peerreviewed::before {
+    content: "peer-reviewed ";
+    font-size: 0.6em;
+    font-family: monospace;
+    color: #f442a7;
+    left: -30px;
+    /* top: +2px; */
+	position: absolute;}
+.journal::before {
+    content: "journal ";
+    font-size: 0.6em;
+    font-family: monospace;
+    color: #f442a7;
+    left: 3px;
+    /* top: +2px; */
+	position: absolute;}
+.top-5-perc::before {
+    content: "top 5% ";
+    font-size: 0.6em;
+    font-family: monospace;
+    color: #f442a7;
+    left: 8px;
+    /* top: +2px; */
+	position: absolute;}
+.report::before {
+    content: "report ";
+    font-size: 0.6em;
+    font-family: monospace;
+    left: 8px;
+    /* top: +2px; */
+	position: absolute;}
+.patent::before {
+    content: "patent ";
+    font-size: 0.6em;
+    font-family: monospace;
+    color: #f442a7;
+    left: 8px;
+    /* top: +2px; */
+	position: absolute;}
+.bookchapter::before {
+    content: "book chapter ";
+    font-size: 0.6em;
+    font-family: monospace;
+    left: -24px;
+    /* top: +2px; */
+	position: absolute;}
   </style>
 </head>
 
 <body>
   <article>
 
-    <h1>kuksenok <small>/about /<a href=now/index.html>now</a></small></h1>
-    <p class="subtitle"><small><small>PhD, MS in Computer Science & Engineering from University of Washington<br>BA in Applied Math; Computer Science from Oberlin College, Ohio, US<Br><a href="Kuksenok%20CV%20Dec16%20no-refs.pdf">CV PDF (Dec '16)</a> Reach me via <a href=https://www.linkedin.com/in/kuksenok>LinkedIn</a></small></small></p>
+  <!--
+Life is like riding a bicycle. To keep your balance you must keep moving. 
+~ Albert Einstein letter to his son Eduard, 1930.
+    <li>Staff expert on software engineering at the <a href=http://managefeed.djaghe.com>How We Manage Stuff</a> podcast</li>
+
+  -->
+
+    <h1>kuksenok <!--<small>/about /<a href=now/index.html>now</a></small>--></h1>
+    <p class="subtitle"><small><small>PhD, MS in Computer Science & Engineering from University of Washington<br>BA in Applied Math; Computer Science from Oberlin College, Ohio, US<Br>
+	    <a href="Kuksenok%20CV%20Jun17%20no-refs.pdf.pdf">CV PDF (Jun '17)</a> Reach me via <a href=https://www.linkedin.com/in/kuksenok>LinkedIn</a></small></small></p>
 	
 	
         <p><label for="mn-figure-3" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-figure-3" class="margin-toggle"/><span class="marginnote"><img src="DSC07916.jpg"><br>2017, Ostsee, setting up a treasure hunt in the forest</p>
@@ -34,53 +90,58 @@
         <p><label for="mn-figure-1" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-figure-1" class="margin-toggle"/><span class="marginnote"><a href=kateryna_kuksenok_564x740.jpg><img src="kateryna_kuksenok_564x740.jpg"><br>564x740; ca. Summer 2014</a></p>
 		
     <section>
-    <p>Currently:</p><ul><li>Developer at SAP Innovation Center Potsdam, Germany</li>
-    <li>Staff expert on software engineering at the <a href=http://managefeed.djaghe.com>How We Manage Stuff</a> podcast</li></ul>
-    
-    <p>Research interests:</p><ul><li>software production as a process, and as a craft</li>
-    <li>how non-professional developers write code</li></ul>
 
-    <p>Research methods:</p>
-    <ul><li><a href=https://medium.com/what-about/how-i-do-user-research-fabc89acc7c9>qualitative, ethnographic approaches</a></li>
-    <li>user research through <a href=http://blog.smartbear.com/development/a-developer-and-a-user-walk-into-a-bar-5-steps-to-getting-users-insights-while-avoiding-a-bruised-ego/>interviews</a> and <a href=http://blog.smartbear.com/development/ask-stupid-questions-first-so-you-can-get-better-answers-later/>surveys</a></li>
-    <li>semi-automated analysis of textual, numeric, or network data</li>
-	  </ul>
+    <h3>Socio-technical Systems Research</h3>
+    <ul><li><a href=https://medium.com/what-about/how-i-do-user-research-fabc89acc7c9>qualitative, ethnographic approaches</a>; user research through <a href=http://blog.smartbear.com/development/a-developer-and-a-user-walk-into-a-bar-5-steps-to-getting-users-insights-while-avoiding-a-bruised-ego/>interviews</a> and <a href=http://blog.smartbear.com/development/ask-stupid-questions-first-so-you-can-get-better-answers-later/>surveys</a></li>
+    <li><a href=https://digital.lib.washington.edu/researchworks/handle/1773/36546><strong>Influence apart from Adoption:</strong> How Interaction between Programming and Scientific Practices Shapes Modes of Inquiry in Four Oceanography Teams.</a> (Ph.D. research)</li>
+	<!--<li><a href=https://medium.com/hci-design-at-uw/code-work-in-science-how-it-changes-and-why-it-matters-how-we-talk-about-change-fecd33471b0>Code Work in Science:</a> How it changes and Why is matters how we talk about change</strong>. A short, 6-minute-read version with just the figures and implications. </li>-->
+	</ul>
 
-<h2>Tech+Society Research</h2>
 
+<p><label for="mn-figure-2" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-figure-2" class="margin-toggle"/><span class="marginnote"><a href=http://pingconference.kinja.com/ping-collaborate-panel-3-new-horizons-for-social-1642067833><img src="panel.jpg"><br>A video</a> of an invited panel appearance - moderated by Nick Denton, Gawker Media founder - about the role of social media in political action. (Budapest, 2014)</p>
+
+<h3>2017</h3>
 <ul>
-    <li><a href=https://digital.lib.washington.edu/researchworks/handle/1773/36546><strong>Influence apart from Adoption:</strong> How Interaction between Programming and Scientific Practices Shapes Modes of Inquiry in Four Oceanography Teams.</a> (Ph.D. research)
-	
+<li class="journal">Kateryna Kuksenok, Cecilia Aragon, James Fogarty, Charlotte P. Lee, Gina Neff.
+	<a href=https://rd.springer.com/article/10.1007/s10606-017-9285-x?wt_mc=Internal.Event.1.SEM.ArticleAuthorOnlineFirst>Deliberate Individual Change Framework for Understanding Programming Practices in four Oceanography Groups</a>.
+	Comput Supported Coop Work (2017). doi:10.1007/s10606-017-9285-x.
 	</li>
-<li><a href=https://medium.com/hci-design-at-uw/code-work-in-science-how-it-changes-and-why-it-matters-how-we-talk-about-change-fecd33471b0>Code Work in Science:</a> How it changes and Why is matters how we talk about change</strong>. A short, 6-minute-read version with just the figures and implications. </li>
-    <li><a href=https://medium.com/what-about/hope-lies-the-internet-9a983cd68f66>Role of social media in 2014 Ukraine Maidan events</a> (Central European University, Phil Howard)</li>
-            <li>Combining automated analysis of user-generated content with qualitative methods (Amazon.com, references upon request)</li>
-    <li><a href=https://faculty.washington.edu/aragon/pubs/CSCW2013.pdf>Emotion in scientific creativity - automating analysis of a large chat dataset</a> (UW, Cecilia Aragon)</li>
-    <li><a href=https://students.washington.edu/mjbrooks/wp-content/uploads/2012/12/Kuksenok-et-al.-2013-Challenges-and-opportunities-for-technology-in-foreign-language-classrooms.pdf>Classroom tech for language learning</a> (UW, Charlotte Lee)</li>
-    <li><a href=http://www.research.att.com/articles/featured_stories/2011_09/201109_katie_ALFP.html>Using active learning to improve statistical machine translaiton output</a> (AT&T Research, Srinivas Bangalore)</li>
-    <li><a href=http://dub.uw.edu/djangosite/media/papers/Kuksenok_Brooks_Mankoff_-_2013_-_Accessible_online_content_creation_by_end_users.pdf>Accessibility of user-generated content</a> (UW/CMU, Jen Mankoff)</li>
-    <li><a href=http://dl.acm.org/citation.cfm?id=1979027>Navigating conflicting health information online in chronic illness management</a> (Carnegie Mellon, Jen Mankoff)</li>
-            </ul>
-
-<h2>Selected Peer-Reviewed Publications</h2>
-
-        <p><label for="mn-figure-2" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-figure-2" class="margin-toggle"/><span class="marginnote"><a href=http://pingconference.kinja.com/ping-collaborate-panel-3-new-horizons-for-social-1642067833><img src="panel.jpg"><br>A video</a> of an invited panel appearance - moderated by Nick Denton, Gawker Media founder - about the role of social media in political action. (Budapest, 2014)</p>
-            
-<ul>
-<li>Chen C, White L, Kowalewski T, Aggarwal R, Lintott C, Comstock B, Kuksenok K, Aragon C, Holst D, Lendvay T. Crowd-Sourced Assessment of Technical Skills: a novel method to evaluate surgical performance. J Surgical Res. 2014; 187(1): 65-71.</li>
-<li>Kuksenok K, Brooks M, Wang Q, Lee C P. Challenges and Opportunities for Technology in Foreign Language Classrooms. CHI 2013, premier publishing venue in the Human-Computer Interaction (HCI) community. Best Paper Honorable Mention (top 5%)</li>
-<li>Kuksenok K, Mankoff J, Brooks M. Accessible Online Content Creation by End Users. Proceedings of the SIGCHI Conference on Human Factors in Computing Systems. ACM, 2013.</li>
-<li>Brooks M, Kuksenok K, Torkildson M K, Perry D, Robinson J J, Scott T J, Anicello O, Zukowski A, Harris P, Aragon C. Statistical Affect Detection in Collaborative Chat. In Proceedings of the 2013 conference on Computer supported cooperative work. ACM, 2013.</li>
-<li>Scott T J, Kuksenok K, Brooks M, Aragon C. Adapting Grounded Theory to Construct A Taxonomy of Affect in Collaborative Online Chat. Proceedings of the 30th ACM international conference on Design of communication. ACM, 2012</li>
-<li>Mankoff J, Kuksenok K, Kiesler S, Rode J, Waldman K. Competing Online Viewpoints and Models of Chronic Illness. Proceedings of ACM SIGCHI Conference on Human Factors in Computing Systems, 2011.</li></ul>
-
-<h2>Selected Other Publications</h2>
-
-          <ul>  
-<li>Bangalore S, and Kuksenok K. "System and method for collaborative language translation." U.S. Patent No. 9,323,746. 26 Apr. 2016.</li>
-<li>Kuksenok K. "Multilingualism on Social Media in the Maidan Movement." Digital Eastern Europe. Edited by Schreiber and Kosienkowski. 2015.</li>
+<li class="report">Allen A, et al. <a href=http://drops.dagstuhl.de/opus/volltexte/2017/7146>Engineering Academic Software (Dagstuhl Perspectives Workshop 16252).</a> Schloss Dagstuhl--Leibniz-Zentrum fuer Informatik. Dagstuhl, Germany. 2017.</li>
 </ul>
 
+<h3>2016</h3>
+<ul>
+<li class="patent">Bangalore S, and Kuksenok K. "System and method for collaborative language translation." U.S. Patent No. 9,323,746. 26 Apr. 2016. (In the press: <a href=http://www.research.att.com/articles/featured_stories/2011_09/201109_katie_ALFP.html>Using active learning to improve statistical machine translaiton output</a>)</li>
+</ul>
+
+<h3>2015</h3>
+<ul>
+<li class="bookchapter">Kuksenok K. "Multilingualism on Social Media in the Maidan Movement." Digital Eastern Europe. Edited by Schreiber and Kosienkowski. 2015.</li>
+</ul>
+
+<h3>2014</h3>
+<ul>
+<li class="report"><a href=https://medium.com/what-about/hope-lies-the-internet-9a983cd68f66>Role of social media in 2014 Ukraine Maidan events</a> (Central European University, Phil Howard)</li>
+<li class="peerreviewed">Chen C, White L, Kowalewski T, Aggarwal R, Lintott C, Comstock B, Kuksenok K, Aragon C, Holst D, Lendvay T. Crowd-Sourced Assessment of Technical Skills: a novel method to evaluate surgical performance. J Surgical Res. 2014; 187(1): 65-71.</li>
+</ul>
+
+<h3>2013</h3>
+<ul>
+<li class="top-5-perc">Kuksenok K, Brooks M, Wang Q, Lee C P. <a href=https://students.washington.edu/mjbrooks/wp-content/uploads/2012/12/Kuksenok-et-al.-2013-Challenges-and-opportunities-for-technology-in-foreign-language-classrooms.pdf>Challenges and Opportunities for Technology in Foreign Language Classrooms</a>. CHI 2013, premier publishing venue in the Human-Computer Interaction (HCI) community. Best Paper Honorable Mention (top 5%)</li>
+<li class="peerreviewed">Kuksenok K, Mankoff J, Brooks M. <a href=http://dub.uw.edu/djangosite/media/papers/Kuksenok_Brooks_Mankoff_-_2013_-_Accessible_online_content_creation_by_end_users.pdf>Accessible Online Content Creation by End Users.</a> Proceedings of the SIGCHI Conference on Human Factors in Computing Systems. ACM, 2013.</li>
+<li class="peerreviewed">Brooks M, Kuksenok K, et al. <a href=https://faculty.washington.edu/aragon/pubs/CSCW2013.pdf>Statistical Affect Detection in Collaborative Chat.</a> In Proceedings of the 2013 conference on Computer supported cooperative work. ACM, 2013.</li>
+</ul>
+
+
+<h3>2012</h3>
+<ul>
+<li class="peerreviewed">Scott T J, Kuksenok K, Brooks M, Aragon C. Adapting Grounded Theory to Construct A Taxonomy of Affect in Collaborative Online Chat. Proceedings of the 30th ACM international conference on Design of communication. ACM, 2012</li>
+</ul>
+
+<h3>2011</h3>
+<ul>
+<li class="peerreviewed">Mankoff J, Kuksenok K, Kiesler S, Rode J, Waldman K. <a href=http://dl.acm.org/citation.cfm?id=1979027>Competing Online Viewpoints and Models of Chronic Illness</a>. Proceedings of ACM SIGCHI Conference on Human Factors in Computing Systems, 2011.</li>
+</ul>
 
 <h2>P.S./A.K.A.</h2>
 
