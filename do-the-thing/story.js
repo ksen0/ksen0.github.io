@@ -15,6 +15,9 @@ var squiffy = {};
     var initLinkHandler = function () {
         var handleLink = function (link) {
             if (link.hasClass('disabled')) return;
+            
+            link.addClass("mychoice");
+
             var passage = link.data('passage');
             var section = link.data('section');
             var rotateAttr = link.attr('data-rotate');
