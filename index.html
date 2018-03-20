@@ -1,186 +1,120 @@
-<!DOCTYPE html>
+<html>
+
 <head>
-  <meta charset="utf-8"/>
-  <title>Kit Kuksenok, PhD</title>
-<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <link rel="stylesheet" href="tufte.css"/>
-  <link rel="stylesheet" href="latex.css"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style type="text/css">
-   table#newspaper-tone > thead > tr > th:first-child { padding-right: 20%; }
-   table#newspaper-tone > tbody > tr > td:nth-child(1) { padding-right: 15%; }
-   table#newspaper-tone > thead > tr > th:nth-child(2) { width: 70px; }
-   table#newspaper-tone > thead > tr > th:nth-child(3) { padding: 0 59px;
-                                                         min-width: 100px; }
-   
-   @media screen and (max-width: 700px) { table#newspaper-tone > thead > tr > th:first-child { padding-right: 0; }
-                                          table#newspaper-tone > thead > tr > th:nth-child(2) { padding-right: 0; }
-                                          table#newspaper-tone > thead > tr > th:nth-child(3) { padding-right: 0; }
-                                          table#newspaper-tone > tbody > tr > td:nth-child(1) { padding-right: 0; }
-                                          table#newspaper-tone > tbody > tr > td:nth-child(2) { padding-right: 0; }
-                                          table#newspaper-tone > tbody > tr > td:nth-child(3) { padding-right: 0; }}
-	  
-.peerreviewed::before {
-    content: "peer-reviewed ";
-    font-size: 0.6em;
-    font-family: monospace;
-    color: #f442a7;
-    left: -30px;
-    /* top: +2px; */
-	position: absolute;}
-.journal::before {
-    content: "journal ";
-    font-size: 0.6em;
-    font-family: monospace;
-    color: #f442a7;
-    left: 3px;
-    /* top: +2px; */
-	position: absolute;}
-.top-5-perc::before {
-    content: "top 5% ";
-    font-size: 0.6em;
-    font-family: monospace;
-    color: #f442a7;
-    left: 8px;
-    /* top: +2px; */
-	position: absolute;}
-.report::before {
-    content: "report ";
-    font-size: 0.6em;
-    font-family: monospace;
-    left: 8px;
-    /* top: +2px; */
-	position: absolute;}
-.patent::before {
-    content: "patent ";
-    font-size: 0.6em;
-    font-family: monospace;
-    color: #f442a7;
-    left: 8px;
-    /* top: +2px; */
-	position: absolute;}
-.bookchapter::before {
-    content: "book chapter ";
-    font-size: 0.6em;
-    font-family: monospace;
-    left: -24px;
-    /* top: +2px; */
-	position: absolute;}
-  </style>
+    <style type="text/css">
+        .fat-tag {
+            padding: 5px;
+        }
+        .tag.writer {
+            background-color:#8dd3c7;
+            color: #000;
+        }
+        .tag.coder {
+            background-color:#ffffb3;
+            color: #000;
+        }
+        .tag.scholar {
+            background-color:#bebada;
+            color: #000;
+        }
+        h1{
+            margin-top:180px;
+        }
+        h3{
+            margin-top:50px;
+        }
+        body{
+            width:50%;
+            max-width: 800px;
+            margin:auto;
+        }
+    </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+
+            $( ".tag.writer" ).mouseover(function() {
+              $( ".writer" ).addClass("tag");
+            }).mouseout(function() {
+              $( ".writer" ).removeClass("tag");
+              $(this).addClass("tag");
+            });
+
+            $( ".tag.coder" ).mouseover(function() {
+              $( ".coder" ).addClass("tag");
+            }).mouseout(function() {
+              $( ".coder" ).removeClass("tag");
+              $(this).addClass("tag");
+            });
+
+        });
+
+    </script>
 </head>
 
 <body>
-  <article>
 
-  <!--
-Life is like riding a bicycle. To keep your balance you must keep moving. 
-~ Albert Einstein letter to his son Eduard, 1930.
-    
+<!--<img src="ME-WATERFALL.jpg" align=right width=300>-->
 
-  -->
+<h1>Kit Kuksenok, PhD</h1>
 
-    <h1>Kit Kuksenok, PhD<!-- <small>/about /<a href=now/index.html>now</a></small>--></h1>
+<h2>
+    <span class='fat-tag tag writer'>writer</span>
+    <span class='fat-tag tag coder'>coder</span>
+    <a class='fat-tag tag scholar' href=https://scholar.google.de/citations?user=BT54SFsAAAAJ>scholar</a>
+    <!--<span class='tag wip'>work-in-progress</span>-->
+</h2>
+<br \>
+<!-- about this site
 
+<!-- two columns basically and everything is brushing and linking -->
 
-        <p><label for="mn-figure-1" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-figure-1" class="margin-toggle"/><span class="marginnote"><!--<a href=sep17.JPG><img src="sep17_sm.jpg"><br>Sep 2017<br><br></a></p>
--->
-<p><label for="mn-figure-0" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-figure-8" class="margin-toggle"/><span class="marginnote"><a href=do-the-thing/index.html><img src=https://ksen0.github.io/do-the-thing/v2.png><br>"Should I do the thing?" decision-making chart (v2.0!)</a><br><br><br><br> <br><a href="Kuksenok%20CV%20Jun17%20no-refs.pdf.pdf">CV/Resume as of Jun 2017 / PDF</a><br>
-     Reach me via <a href=https://www.linkedin.com/in/kuksenok>LinkedIn</a><br><br>
-      Visual art <a href=things/index.html>things</a><br>
-      Super-sporadic posts on <a href=https://medium.com/@ksen0>my old blog</a><br>
-      Sketches & sightings on <a href=http://instagram.com/jvandocay>instagram</a></p>
+<h3>Right now, I am:</h3>
 
-
-<!--        <p><label for="mn-figure-0" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-figure-1" class="margin-toggle"/><span class="marginnote"><a href=things/index.html><img src=things/images/art/DRAWING1.JPG><br>I also make things<br><br></a></p>-->
-<!--    
-  <p><label for="mn-figure-2" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-figure-2" class="margin-toggle"/><span class="marginnote"><a href=http://pingconference.kinja.com/ping-collaborate-panel-3-new-horizons-for-social-1642067833><img src="panel_sm.jpg"><br>A video</a> of an invited panel appearance - moderated by Nick Denton, Gawker Media founder - about the role of social media in political action. (Budapest, 2014)<br><br></p>
--->
-<!--        <p><label for="mn-figure-3" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-figure-3" class="margin-toggle"/><span class="marginnote"><img src="DSC07916_sm.jpg"><br>Setting up a treasure hunt (2017, Ostsee) [cf, <a href=https://www.youtube.com/watch?v=9RHFFeQ2tu4>inspiration</a>]<br><br></p>-->
-    
-    <p class="subtitle"><small><small>Writer based in Berlin. Last Updated: December, 2017</small></small></p>
-
-
-    <p class="subtitle"><small><small>PhD, MS in Computer Science & Engineering from University of Washington<br>BA in Applied Math; Computer Science from Oberlin College, Ohio, US</small></small></p>
-
-    <p class="subtitle"><small><small><a href=https://pal.chat/>Job Pal</a> Senior R&D Engineer (as of February 2018)<br><a href=http://www.hpi.uni-potsdam.de/hirschfeld/>Hasso-Plattner Institute Software Architecture</a> visiting researcher<br><a href=http://managefeed.djaghe.com>How We Manage Stuff</a> podcast contributing writer, staff expert on software engineering<br><a href=https://www.meetup.com/Tech-Book-Club-Berlin/>Tech Book Club Berlin</a> organizer and facilitator</small></p>
-
-
-
-    <section>
-
-    <h3>Socio-technical Systems Research</h3>
-    <ul><li><a href=https://medium.com/what-about/how-i-do-user-research-fabc89acc7c9>qualitative, ethnographic approaches</a>; user research through <a href=http://blog.smartbear.com/development/a-developer-and-a-user-walk-into-a-bar-5-steps-to-getting-users-insights-while-avoiding-a-bruised-ego/>interviews</a> and <a href=http://blog.smartbear.com/development/ask-stupid-questions-first-so-you-can-get-better-answers-later/>surveys</a></li>
-    <li><a href=https://digital.lib.washington.edu/researchworks/handle/1773/36546><strong>Influence apart from Adoption:</strong> How Interaction between Programming and Scientific Practices Shapes Modes of Inquiry in Four Oceanography Teams.</a> (Ph.D. research)</li>
-	<!--<li><a href=https://medium.com/hci-design-at-uw/code-work-in-science-how-it-changes-and-why-it-matters-how-we-talk-about-change-fecd33471b0>Code Work in Science:</a> How it changes and Why is matters how we talk about change</strong>. A short, 6-minute-read version with just the figures and implications. </li>-->
-	</ul>
-
-
-
-<h3>2017</h3>
 <ul>
-<li class="journal">Kateryna Kuksenok, Cecilia Aragon, James Fogarty, Charlotte P. Lee, Gina Neff.
-	<a href=https://rd.springer.com/article/10.1007/s10606-017-9285-x?wt_mc=Internal.Event.1.SEM.ArticleAuthorOnlineFirst>Deliberate Individual Change Framework for Understanding Programming Practices in four Oceanography Groups</a>.
-	Computer Supported Cooperative Work (2017). doi:10.1007/s10606-017-9285-x.
-	</li>
-<li class="report">Allen A, et al. <a href=http://drops.dagstuhl.de/opus/volltexte/2017/7146>Engineering Academic Software (Dagstuhl Perspectives Workshop 16252).</a> Schloss Dagstuhl--Leibniz-Zentrum fuer Informatik. Dagstuhl, Germany. 2017.</li>
-</ul>
-
-<h3>2016</h3>
-<ul>
-<li class="patent">Bangalore S, and Kuksenok K. "System and method for collaborative language translation." U.S. Patent No. 9,323,746. 26 Apr. 2016. (In the press: <a href=http://www.research.att.com/articles/featured_stories/2011_09/201109_katie_ALFP.html>Using active learning to improve statistical machine translaiton output</a>)</li>
-</ul>
-
-<h3>2015</h3>
-<ul>
-<li class="bookchapter">Kuksenok K. "Multilingualism on Social Media in the Maidan Movement." Digital Eastern Europe. Edited by Schreiber and Kosienkowski. 2015.</li>
-</ul>
-
-<h3>2014</h3>
-<ul>
-<li class="report"><a href=https://medium.com/what-about/hope-lies-the-internet-9a983cd68f66>Role of social media in 2014 Ukraine Maidan events</a> (Central European University, Phil Howard)</li>
-<li class="peerreviewed">Chen C, White L, Kowalewski T, Aggarwal R, Lintott C, Comstock B, Kuksenok K, Aragon C, Holst D, Lendvay T. Crowd-Sourced Assessment of Technical Skills: a novel method to evaluate surgical performance. J Surgical Res. 2014; 187(1): 65-71.</li>
-</ul>
-
-<h3>2013</h3>
-<ul>
-<li class="top-5-perc">Kuksenok K, Brooks M, Wang Q, Lee C P. <a href=https://students.washington.edu/mjbrooks/wp-content/uploads/2012/12/Kuksenok-et-al.-2013-Challenges-and-opportunities-for-technology-in-foreign-language-classrooms.pdf>Challenges and Opportunities for Technology in Foreign Language Classrooms</a>. CHI 2013, premier publishing venue in the Human-Computer Interaction (HCI) community. Best Paper Honorable Mention (top 5%)</li>
-<li class="peerreviewed">Kuksenok K, Mankoff J, Brooks M. <a href=http://dub.uw.edu/djangosite/media/papers/Kuksenok_Brooks_Mankoff_-_2013_-_Accessible_online_content_creation_by_end_users.pdf>Accessible Online Content Creation by End Users.</a> Proceedings of the SIGCHI Conference on Human Factors in Computing Systems. ACM, 2013.</li>
-<li class="peerreviewed">Brooks M, Kuksenok K, et al. <a href=https://faculty.washington.edu/aragon/pubs/CSCW2013.pdf>Statistical Affect Detection in Collaborative Chat.</a> In Proceedings of the 2013 conference on Computer supported cooperative work. ACM, 2013.</li>
-</ul>
-
-
-<h3>2012</h3>
-<ul>
-<li class="peerreviewed">Scott T J, Kuksenok K, Brooks M, Aragon C. Adapting Grounded Theory to Construct A Taxonomy of Affect in Collaborative Online Chat. Proceedings of the 30th ACM international conference on Design of communication. ACM, 2012</li>
-</ul>
-
-<h3>2011</h3>
-<ul>
-<li class="peerreviewed">Mankoff J, Kuksenok K, Kiesler S, Rode J, Waldman K. <a href=http://dl.acm.org/citation.cfm?id=1979027>Competing Online Viewpoints and Models of Chronic Illness</a>. Proceedings of ACM SIGCHI Conference on Human Factors in Computing Systems, 2011.</li>
+    <li><span class='coder'><a href=http://jobpal.ai>Job Pal</a> Senior R&D Engineer</span></li>
+    <!--<li>Hasso-Plattner Institute Software Architecture visiting researcher</li>-->
+    <li><a href=https://managefeed.djaghe.com>How We Manage Stuff</a> podcast <span class='writer'>contributing writer</span>, <span class='coder'>staff expert on software engineering</span></li>
+    <li><span class='writer'><a href=https://www.meetup.com/Tech-Book-Club-Berlin/>Tech Book Club Berlin</a> organizer and facilitator</span></li>
 </ul>
 
 <!--
-<h2>P.S./A.K.A.</h2>
+<h3>Recently, I contributed to:</h3>
+<ul>
+    <!-<li>How We Manage Stuff: Scrum Master and Sous Chef</li>
+    <li><span class='writer'>Some advice* (If youre a programmer and you started to make a website... about this site: using colorbrewer for colors, and keeping it fucking simple, and the question, is anyone still using jquery? i just learned react last week and its wild how much the web stack [programming sucks article] has changed since i first learned JS / the art syllabus!!!!)</span></li>-->
+    <!--<li><span class='wip'>If Rocks Could Talk</span></li>--
+    <li><span class='writer'>How We Manage Stuff: Learning to Work</span></li>
+    <li><span class='coder'>How We Manage Stuff: Scrum Master and Sous Chef</span></li>
+</ul>-->
 
-<p>You may also know me as: Kateryna Kuksenok, Katie Kuksenok, Katja Kuksenok, Kt Kuksenok.</p>
--->
-    </section>
-  </article>
+<h3>You can:</h3>
+<ul>
+    <li>Look at my research <a href=cv.pdf>CV</a> and <a href=https://scholar.google.de/citations?user=BT54SFsAAAAJ>publications</a></li>
+    <li>Contact me via email: <em>three-letter-first-name</em><strong>@pal.chat</strong></li>
+</ul>
 
+<h3><span class='writer'>"Should I Do the Thing?"</span> <em>v2.0</em></h3>
+<p><a href=do-the-thing/index.html><img src=https://ksen0.github.io/do-the-thing/v2.png style="width:100%"></a>
+
+
+<h3>Last Updated:</h3>
+<p>March 20, 2018</p>
 <!--
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-68362803-1', 'auto');
-  ga('send', 'pageview');
+<h3>Visual Language</h3>
 
-</script>
+Comic; watercolor; digital collage; interactive/generative
+
+<h3>Digital Language</h3>
+I do chatbots now. Here's a little one, named Cookie, I made in JavaScript (yes, pure  JavaScript! because I'm insane and I want ayone to be able to set up their own thing for free on GHio https://lizrush.gitbooks.io/algorithms-for-webdevs-ebook/content/chapters/tf-idf.html and lots of cool things from Coursera transcripts, rainer maria rilke, lao tzu, oscar wilde. the bot is extremely gay and questions its gender.):
+<br><br>
+<strong>Cookie:</strong> Hello, human. Before you wuestion my artificial intelligence, why not question what non-artificial, human intelligence is? Are plants intelligent, for example?
+
+Actually I'm transgender. Has a twin sibling called Pinocchie which wants to be a real human, but, like different. Cookie might want to BE a person but not necessarily BECOME a person
+
+<input type=text><button>go</button>
 -->
-  
+
 </body>
 </html>
-
-<!-- drawing and painting, playing guitar, reading and writing speculative/historical fiction and magic realism, tinkering with LEDs and sensors, wilderness backpacking, travel, and bouldering  -->
