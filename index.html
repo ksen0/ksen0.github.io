@@ -18,6 +18,10 @@
             padding: 5px;
             border-radius: 4px;
         }
+        .tag.bln {
+            background-color:#f20866;
+            color: #fff;
+        }
         .tag.writer {
             background-color:#f9d851;
             color: #000;
@@ -96,7 +100,7 @@
             var rainbow = 0;
             setInterval(function() {
                 rainbow = (rainbow+5)%360;
-                $(".me").css("filter","grayscale(70%) hue-rotate(" +rainbow+ "deg)");
+                $(".me").css("filter","grayscale(60%) hue-rotate(" +rainbow+ "deg)");
             }, 40);
         });
 
@@ -112,6 +116,7 @@
 <h1>Kit Kuksenok, PhD </h1>
 
 <h2>
+    <span class='fat-tag tag bln' style="font-weight: normal;">berlin-based</span>
     <a class='fat-tag tag writer' href=https://medium.com/@ksen0>writer</a>
     <span class='fat-tag tag coder'>coder</span>
     <a class='fat-tag tag scholar' href=https://scholar.google.de/citations?user=BT54SFsAAAAJ>scholar</a>
@@ -142,14 +147,15 @@
     <li>Take a look at my <a href=cv.pdf class='scholar'>research CV</a> and <a href=https://scholar.google.de/citations?user=BT54SFsAAAAJ class='scholar'>scientific publications</a></li>
     <!--<li><a href=https://ksen0.gitbooks.io/meta/ class='writer'>Browse my reflective and methods writing</a>-->
     <li>Contact me via email: <em>three-letter-first-name</em><strong>@jobpal.ai</strong></li>
+    <li><em>Try to spot all the rainbows on this page</em></li>
 </ul>
 
+<hr>
+<p><a href=do-the-thing/index.html><img src=https://ksen0.github.io/do-the-thing/v2.png style="width:100%"></a></p>
 <hr>
 
 <p><a href=http://www.evaporatedkid.com/deardata><img src=dear_data.png style="width:100%"></a></p>
 
-<hr>
-<p><a href=do-the-thing/index.html><img src=https://ksen0.github.io/do-the-thing/v2.png style="width:100%"></a></p>
 <hr>
 
 <p>🌈 Last Updated: July 7, 2018</p>
