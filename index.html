@@ -1,6 +1,71 @@
 <html>
 
 <head>
+    <!--
+
+    You know, back when I learned to do web programming, you could plausibly
+    peddle layouts based on, just, nested tables and iframes.
+
+    I try to timebox tinkering on my website.
+
+    Do you remember websites? Like, websites about a particular person's very
+    specific selection of hobbies plus maybe a pet? "Welcome to my website!
+    Here you can find everything you need to know about succulents. Also
+    here is my poodle, Beatrice; and last weekend I made a very good soup,
+    so here is the recipe for that too."
+
+    Those websites were magic. Those "under construction" gifs* would dazzle
+    the viewer, and the long ranty zero-SEO content would have a fertile
+    ground in which to blossom.
+
+    * http://textfiles.com/underconstruction/
+
+    So!
+
+    Welcome to my website.
+
+    It's under construction.
+
+    I like charts, flowcharts, little graphics, just, that stuff. You can
+    find some of that here. I don't have a dog. But here is some pretty A+
+    soup you can make (it's a variation on Ukrainian borscht - and if you
+    make it, and someone is like, "that's not authentic" you can tell them
+    a Ukrainian told you to make it like this and anyway there are as many
+    authentic borscht recipe as there are Ukrainians):
+
+
+    Ingredients, for basically half a week's supply, so, beware:
+    - Potatoes (like 5 or 10 depending on your enthusiasm for potatoes)
+    - Can of black beans (or you can make em fresh up to you)
+    - 1 large beer root or 2 medium ones. We do not discuss the small ones
+    - Chicken wings (or legs), like 6-10
+
+    Start by peeling and chopping up some potatoes into whatever
+    size feels alright for a soup. I would cut a medium potato in about 6
+    pieces.
+
+    Start a big ol' pot of water half-filled.
+
+    The rest is Under Construction, as of Jan 2019.
+
+
+    -------------------------------- FAQ ----------------------------------
+    Q: Why rainbows? Are you queer?
+    A: So queer! Ask me about it in real life.
+
+    Q: What is it like to be a woman in tech?
+    A: Please follow up with me in a private channel, and I'll point you to
+       resources related to specific things you are interested in! I've
+       done outreach and diversity volunteering, mostly in academia, to
+       improve inclusiveness in tech. This is what I draw from; personally,
+       I don't identify as a woman, so I cannot say much from my own POV
+       what being a woman in tech is. But I am asked this a lot, because
+       people think I look like a woman, and my only recommendation is,
+       try to ask this less. If you want to ask this, try asking:
+       "What can I do to improve inclusiveness in our field?"
+       or something ot this effect.
+
+    -->
     <style type="text/css">
         a {
             color:#f20866
@@ -100,7 +165,7 @@
             var rainbow = 0;
             setInterval(function() {
                 rainbow = (rainbow+5)%360;
-                $(".me").css("filter","grayscale(60%) hue-rotate(" +rainbow+ "deg)");
+                $(".me").css("filter","grayscale(30%) hue-rotate(" +rainbow+ "deg)");
             }, 40);
         });
 
@@ -120,27 +185,28 @@
 <h2>
     <span class='fat-tag tag bln' style="font-weight: normal;">berlin-based</span>
     <a class='fat-tag tag writer' href=https://medium.com/@ksen0>writer</a>
-    <span class='fat-tag tag coder'>coder</span>
-    <a class='fat-tag tag scholar' href=https://scholar.google.de/citations?user=BT54SFsAAAAJ>scholar</a>
+    <a class='fat-tag tag coder' href=http://github.com/ksen0>coder</a>
+    <a class='fat-tag tag scholar' href=#academicwriting>scholar</a>
     <a class='fat-tag tag artist' href=https://www.instagram.com/jvandocay/>artist</a>
-   <!-- 
-    <span class='tag wip'>work-in-progress</span>-->
 </h2>
 <br \>
-<!-- about this site
+<!-- Brushing and linking! Yeaaahhhh! -->
 
-<!- two columns basically and everything is brushing and linking -->
 <h3>Right now, I am:</h3>
 
 <ul>
-    <li>Job Pal Senior R&D Engineer<ul><li>We <A href=https://jobpal.ai/en/blog/were-not-ai-time-and-s-excellent/ class='coder'>build chatbots for recruiting</A></li><li>In research partnerships with our clients, we do <a href=http://jobpal.ai/en/research>research and consulting</a> on <span  class='scholar'>Natural Language Processing / Machine Learning</span> (NLP/ML), <span  class='scholar'>Human-Computer Interaction</span> (HCI), and <span  class='scholar'>Information Visualization</span> topics</li>
+    <li><code><small><b>[since Feb '18]</b></small></code><br>
+        <!-- sometimes I also miss the irredeemable mix of form and function that was early-00s web development -->
+        Job Pal Senior R&D Engineer <ul><li>We <A href=https://jobpal.ai/en/blog/were-not-ai-time-and-s-excellent/ class='coder'>build chatbots for recruiting</A></li><li>In partnerships with clients, we do <a href=http://jobpal.ai/en/research>research and consulting</a> on <span  class='scholar'>Natural Language Processing / Machine Learning</span> (NLP/ML), <span  class='scholar'>Human-Computer Interaction</span> (HCI), and <span  class='scholar'>Information Visualization</span> (InfoVis) topics</li>
     </ul></li>
     <!--<li>Hasso-Plattner Institute Software Architecture visiting researcher</li>-->
-    <li><span class='scholar'><a href=http://troublebook.club>Trouble Book Club</a> Principal Instigator</span><ul><li>We're a group of writers, artists, and scientists crafting experiments in fictional worlds...</li>
-        <li>...and, currently, <span  class='writer artist'>a monthly visual art and narrative puzzle project,<br><a href=http://troublebook.club/lostmail/>Lost Mail Redistribution Program</span></li>
+    <li><code><small><b>[since Dec '17]</b></small></code><br>
+        <span class='scholar'><a href=http://troublebook.club>Trouble Book Club</a> Principal Instigator</span><ul><li>We're a group of writers, artists, and scientists crafting experiments in fictional worlds...</li>
+        <li>...and, currently, <span  class='artist'>a monthly visual art</span> and <span class='writer'>drama/mystery</span>  project,<br><a href=http://troublebook.club/lostmail/>Lost Mail Redistribution Program</a></li>
     </ul></li>
-    <li><a href=https://managefeed.djaghe.com>How We Manage Stuff</a> podcast <span class='writer'>contributing writer</span>, <span class='coder'>staff expert on software engineering</span></li>
-    <li><span class='writer'><a href=https://www.meetup.com/Tech-Book-Club-Berlin/>Tech Book Club Berlin</a> organizer and facilitator</span></li>
+    <li><code><small><b>[since Oct '16]</b></small></code><br>
+        <a href=https://managefeed.djaghe.com>How We Manage Stuff</a> - a dramatic educational podcast on management of software teams - <span class='writer'>contributing writer</span> and <span class='coder'>staff expert on software engineering</span></li>
+    <!--<li><span class='writer'><a href=https://www.meetup.com/Tech-Book-Club-Berlin/>Tech Book Club Berlin</a> organizer and facilitator</span></li>-->
 
 </ul>
 
@@ -149,41 +215,88 @@
     <li>Take a look at my <a href=cv.pdf class='scholar'>research CV</a> and <a href=https://scholar.google.de/citations?user=BT54SFsAAAAJ class='scholar'>scientific publications</a></li>
     <!--<li><a href=https://ksen0.gitbooks.io/meta/ class='writer'>Browse my reflective and methods writing</a>-->
     <li>Contact me via email: <em>three-letter-first-name</em><strong>@jobpal.ai</strong></li>
-    <li><em>Try to spot all the rainbows on this page</em></li>
+    <li><em>Try to spot all the rainbows on this page</em><ul><li>July 2018 Clarification: not counting source code</li><li>Sep 2018 Update: there are now 4 rainbows</li></ul></li>
 </ul>
 
 <hr>
 <p><a href=do-the-thing/index.html><img src=https://ksen0.github.io/do-the-thing/v2.png style="width:100%"></a></p>
 <hr>
 
-<p><a href=http://www.evaporatedkid.com/deardata><img src=dear_data.png style="width:100%"></a></p>
+<p><a href=https://www.instagram.com/jvandocay/><img src=ig2018-jvandocay.jpg style="width:40%;float:left"></a><a href=http://www.evaporatedkid.com/deardata><img src=dear_data.png style="width:60%"></a></p>
 
 <hr>
 
-<p>🌈 Last Updated: July 7, 2018</p>
+<h3><a name=academicwriting></a>Selected Academic Writing</h3>
 
-<!--<ul>
-    <!-<li>How We Manage Stuff: Scrum Master and Sous Chef</li>
-    <li><span class='writer'>Some advice* (If youre a programmer and you started to make a website... about this site: using colorbrewer for colors, and keeping it fucking simple, and the question, is anyone still using jquery? i just learned react last week and its wild how much the web stack [programming sucks article] has changed since i first learned JS / the art syllabus!!!!)</span></li>-->
-    <!--<li><span class='wip'>If Rocks Could Talk</span></li>--
-    <li><span class='writer'>How We Manage Stuff: Learning to Work</span></li>
-    <li><span class='coder'>How We Manage Stuff: Scrum Master and Sous Chef</span></li>
-</ul>-->
-<!--
+See also: <a href=https://scholar.google.de/citations?user=BT54SFsAAAAJ>my Google Scholar profile</a>
 
-<h3>Visual Language</h3>
+<h4>Study of Software Production</h4>
 
-Comic; watercolor; digital collage; interactive/generative
+<!--<h3>2018</h3>-->
+<ul>
+    <li class="bookchapter">Kit Kuksenok, Stefania Santagati. <Strong>Readable as Intimate: towards a conceptual framework for empirical interrogation of software implementations of intimacy.</Strong> <em>AI Love You - Developments on Human-Robot Intimate Relationships</em>. Edited by Yuefang Zhou, Martin H. Fischer. In Print (2018)
+    </li>
+<!--</ul>
 
-<h3>Digital Language</h3>
-I do chatbots now. Here's a little one, named Cookie, I made in JavaScript (yes, pure  JavaScript! because I'm insane and I want ayone to be able to set up their own thing for free on GHio https://lizrush.gitbooks.io/algorithms-for-webdevs-ebook/content/chapters/tf-idf.html and lots of cool things from Coursera transcripts, rainer maria rilke, lao tzu, oscar wilde. the bot is extremely gay and questions its gender.):
-<br><br>
-<strong>Cookie:</strong> Hello, human. Before you wuestion my artificial intelligence, why not question what non-artificial, human intelligence is? Are plants intelligent, for example?
 
-Actually I'm transgender. Has a twin sibling called Pinocchie which wants to be a real human, but, like different. Cookie might want to BE a person but not necessarily BECOME a person
+<h3>2017</h3>
+<ul>-->
+<li class="journal">K Kuksenok, Cecilia Aragon, James Fogarty, Charlotte P. Lee, Gina Neff.
+    <a href=https://rd.springer.com/article/10.1007/s10606-017-9285-x?wt_mc=Internal.Event.1.SEM.ArticleAuthorOnlineFirst>Deliberate Individual Change Framework for Understanding Programming Practices in four Oceanography Groups</a>.
+    Computer Supported Cooperative Work (2017). doi:10.1007/s10606-017-9285-x.
+    </li>
+    <li class="report">Allen A, et al. <a href=http://drops.dagstuhl.de/opus/volltexte/2017/7146>Engineering Academic Software (Dagstuhl Perspectives Workshop 16252).</a> Schloss Dagstuhl--Leibniz-Zentrum fuer Informatik. Dagstuhl, Germany. 2017.</li>
+    <li class="phd">Kuksenok, K. <a href=https://digital.lib.washington.edu/researchworks/handle/1773/36546>"Influence apart from adoption: How interaction between programming and scientific practices shapes modes of inquiry in four oceanography teams."</a> PhD diss., 2016.</li>
+</ul>
+<!--</ul>
 
-<input type=text><button>go</button>
--->
+<h3>2016</h3>
+<ul>-->
+
+
+<h4>Natural Language Processing and Machine Learning</h4>
+<ul>
+    <li class="patent">Bangalore S, and Kuksenok K. "System and method for collaborative language translation." U.S. Patent No. 9,323,746. 26 Apr. 2016. (In the press: <a href=http://www.research.att.com/articles/featured_stories/2011_09/201109_katie_ALFP.html>Using active learning to improve statistical machine translation output</a>)</li>
+    
+    <li class="peerreviewed">Chen C, White L, Kowalewski T, Aggarwal R, Lintott C, Comstock B, Kuksenok K, Aragon C, Holst D, Lendvay T. Crowd-Sourced Assessment of Technical Skills: a novel method to evaluate surgical performance. J Surgical Res. 2014; 187(1): 65-71.</li>
+    <li class="peerreviewed">Brooks M, Kuksenok K, et al. <a href=https://faculty.washington.edu/aragon/pubs/CSCW2013.pdf>Statistical Affect Detection in Collaborative Chat.</a> In Proceedings of the 2013 conference on Computer supported cooperative work. ACM, 2013.</li>
+</ul>
+
+<h4>Qualitative Study of Sociotechnical Systems</h4>
+
+<!--</ul>
+
+<h3>2015</h3>
+<ul>-->
+<ul>
+<li class="bookchapter">Kuksenok K. "Multilingualism on Social Media in the Maidan Movement." Digital Eastern Europe. Edited by Schreiber and Kosienkowski. 2015.</li>
+<!--</ul>
+
+<h3>2014</h3>
+<ul>-->
+<li class="report"><a href=https://medium.com/what-about/hope-lies-the-internet-9a983cd68f66>Role of social media in 2014 Ukraine Maidan events</a> (Central European University, Phil Howard)</li>
+<!--</ul>
+
+<h3>2013</h3>
+<ul>-->
+<li class="top-5-perc">Kuksenok K, Brooks M, Wang Q, Lee C P. <a href=https://students.washington.edu/mjbrooks/wp-content/uploads/2012/12/Kuksenok-et-al.-2013-Challenges-and-opportunities-for-technology-in-foreign-language-classrooms.pdf>Challenges and Opportunities for Technology in Foreign Language Classrooms</a>. CHI 2013, premier publishing venue in the Human-Computer Interaction (HCI) community. Best Paper Honorable Mention (top 5%)</li>
+<li class="peerreviewed">Kuksenok K, Mankoff J, Brooks M. <a href=http://dub.uw.edu/djangosite/media/papers/Kuksenok_Brooks_Mankoff_-_2013_-_Accessible_online_content_creation_by_end_users.pdf>Accessible Online Content Creation by End Users.</a> Proceedings of the SIGCHI Conference on Human Factors in Computing Systems. ACM, 2013.</li>
+<!--</ul>
+
+
+<h3>2012</h3>
+<ul>-->
+<li class="peerreviewed">Scott T J, Kuksenok K, Brooks M, Aragon C. Adapting Grounded Theory to Construct A Taxonomy of Affect in Collaborative Online Chat. Proceedings of the 30th ACM international conference on Design of communication. ACM, 2012</li>
+<!--</ul>
+
+<h3>2011</h3>
+<ul>-->
+<li class="peerreviewed">Mankoff J, Kuksenok K, Kiesler S, Rode J, Waldman K. <a href=http://dl.acm.org/citation.cfm?id=1979027>Competing Online Viewpoints and Models of Chronic Illness</a>. Proceedings of ACM SIGCHI Conference on Human Factors in Computing Systems, 2011.</li>
+</ul>
+
+<hr>
+<p>🌈 Last Updated: Jan, 2019</p>
+
 
 </body>
 </html>
