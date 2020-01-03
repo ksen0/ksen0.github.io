@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   <title>Conviction Game</title>
+   <script src="p5/p5.js"></script>
+      <script type="text/javascript">
+
+SECTION_DIMENSION = 10;
+SECTIONS_CONSTANT = 2;
+
+MASKS_2x2 = {
+  "conviction": [0, 0],
+  "tolerance": [0, 1],
+  "community": [1, 0],
+  "fear/rage": [1, 1]
+}
+
+INITIAL = {
+  "conviction": () => Math.random() < 0.5 ? 1 : 0,
+  "tolerance": () => 1,
+  "community": () => 1,
+  "fear/rage": () => 0
+}
+
+DATA = undefined;
+
+SCALE = [
+  [255,255,204],
+  [161,218,180],
+  [65,182,196],
+  [44,127,184],
+  [37,52,148]
+];
+
+CONVICTIONS = [
+  [228,26,28],
+  [152,78,163],
+  [255,127,0]
+];
+
+COLOR_MAP = {
+  "conviction": (value) => CONVICTIONS[value],
+  "tolerance": (value) => SCALE[Math.round(value*(SCALE.length-1))],
+  "community": (value) => SCALE[Math.round(value*(SCALE.length-1))],
+  "fear/rage": (value) => {
+    // todo wat.
+    return SCALE[Math.round(value*(SCALE.length-1)) % SCALE.length];
+  }
+}
+
+RULES = [
+  {
+    "target": "conviction",
+    "action": (i, j) => (DATA["conviction"][i][j]+1)%2
+  },
+  {
+    "target": "tolerance",
+    "action": (i, j) => (DATA["tolerance"][i][j] - DATA["fear/rage"][i][j])
+  },
+  {
+    "target": "fear/rage",
+    "action": (i, j) => {
+      console.log(Math.random())
+      return Math.random()*5
+    }
+  }
+];
+
+// Set dynamically upon setup()
+CELL_SIZE = 0;
+
+
+function setup() {
+  createCanvas(600, 600);
+  CELL_SIZE = Math.floor(width/SECTIONS_CONSTANT/SECTION_DIMENSION);
+
+  frameRate(1);
+  background(255);
+  colorMode(RGB, 255, 255, 255);
+  smooth();
+  initialState();
+}
+
+function initialState() {
+
+  DATA = {}
+  for (var mask in MASKS_2x2) {
+    DATA[mask] = {};
+    for (var i = 0; i < SECTION_DIMENSION; i += 1) {
+      DATA[mask][i] = {};
+      for (var j = 0; j < SECTION_DIMENSION; j += 1) {
+        DATA[mask][i][j] = INITIAL[mask]();
+      }
+    }
+  }
+
+  for (var section in MASKS_2x2){
+    section_i = MASKS_2x2[section][0];
+    section_j = MASKS_2x2[section][1];
+
+    prev = DATA[section][0][0];
+    fill(COLOR_MAP[section](prev));
+
+    for (var i = 0; i < SECTION_DIMENSION; i += 1) {
+      for (var j = 0; j < SECTION_DIMENSION; j += 1) {   
+
+        if (prev != DATA[section][i][j]){
+          prev = DATA[section][i][j]
+          fill(COLOR_MAP[section](prev));
+        }
+
+        rect(i*CELL_SIZE + CELL_SIZE*SECTION_DIMENSION*section_i,
+             j*CELL_SIZE + CELL_SIZE*SECTION_DIMENSION*section_j,
+             CELL_SIZE, CELL_SIZE);
+      }
+    }
+  }
+  stroke(0);
+  line(CELL_SIZE*SECTION_DIMENSION, 0, CELL_SIZE*SECTION_DIMENSION, height);
+  line(0, CELL_SIZE*SECTION_DIMENSION, width, CELL_SIZE*SECTION_DIMENSION);
+}
+
+function calculateIncrement() {
+  for (r in RULES) {
+    rule = RULES[r];
+    console.log("Applying rule upon " + rule["target"])
+    
+    for (var i = 0; i < SECTION_DIMENSION; i += 1) {
+      for (var j = 0; j < SECTION_DIMENSION; j += 1) {
+        DATA[rule["target"]][i][j] = rule["action"](i, j);
+        fill(COLOR_MAP[rule["target"]](DATA[rule["target"]][i][j]));
+        rect(i*CELL_SIZE + CELL_SIZE*SECTION_DIMENSION*MASKS_2x2[rule["target"]][0],
+             j*CELL_SIZE + CELL_SIZE*SECTION_DIMENSION*MASKS_2x2[rule["target"]][1],
+             CELL_SIZE, CELL_SIZE);
+      }
+    }
+  }
+}
+
+function colorCell(section, i, j) {
+
+  if (MASKS_2x2[section] === undefined) {
+    console.log("Unknown section: " + section);
+    return false;
+  }
+
+  if (DATA === undefined || DATA[section] === undefined ||DATA[section][i] === undefined || DATA[section][i][j] === undefined) {
+    console.log("Ok what r u talking about " + section + " " + i + " " + j);
+    return false;
+  }
+
+  fill(COLOR_MAP[section](DATA[section][i][j]));
+  rect(i*CELL_SIZE + CELL_SIZE*SECTION_DIMENSION*MASKS_2x2[section][0],
+       j*CELL_SIZE + CELL_SIZE*SECTION_DIMENSION*MASKS_2x2[section][1],
+       CELL_SIZE, CELL_SIZE);
+
+}
+
+function draw() { 
+  // TODO implement increment based on rules
+}
+
+function keyPressed() {
+  if (key == 'N') {
+    console.log("Begin Anew");
+    initialState();
+
+  } else if (key == " ") {
+    console.log("Pause/Unpause");
+  // TODO pause/unpause
+  }
+}
+function mousePressed() {
+  // TODO implement Acts of Godx
+  console.log(":o");
+}
+
+      </script>
+   </head>
+   <body>
+   </body>
+</html>

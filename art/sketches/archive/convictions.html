@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   <title>Conviction Game</title>
+   <script src="p5/p5.js"></script>
+      <script type="text/javascript">
+
+SECTION_DIMENSION = 10;
+SECTIONS_CONSTANT = 2;
+
+MASKS_2x2 = {
+  "conviction": [0, 0],
+  "tolerance": [0, 1],
+  "community": [1, 0],
+  "fear/rage": [1, 1]
+}
+
+INITIAL = {
+  "conviction": () => Math.random() < 0.5 ? 1 : 0,
+  "tolerance": () => 1,
+  "community": () => 1,
+  "fear/rage": () => 0
+}
+
+DATA = undefined;
+
+SCALE = [
+  [255,255,204],
+  [161,218,180],
+  [65,182,196],
+  [44,127,184],
+  [37,52,148]
+];
+
+SCALE = [
+[213,62,79],
+[252,141,89],
+[254,224,139],
+[255,255,191],
+[230,245,152],
+[153,213,148],
+[50,136,189]
+];
+
+CONVICTIONS = [
+
+[166,216,84],
+[255,217,47],
+
+  [228,26,28],
+  [152,78,163],
+  [255,127,0]
+];
+
+
+get_index = (normalized_value, max) => Math.abs(Math.floor( (max-0.5)*normalized_value)) % max
+zero_floor = (value) => (value > 0) ? (value < 1 ? value : 1) : 0
+
+
+COLOR_MAP = {
+  "conviction": (value) => CONVICTIONS[value],
+  "tolerance": (value) => SCALE[get_index(value, SCALE.length)],
+  "community": (value) => SCALE[get_index(value, SCALE.length)],
+  "fear/rage": (value) => SCALE[get_index(value, SCALE.length)]
+}
+
+// TODO NEIGHBORINOS
+
+function neighbors(orig_i, orig_j, dist=1, decay=2) {
+  nbrs = [];
+
+  for (var i = -1*dist; i <= 1*dist; i += 1) {
+    for (var j = -1*dist; j <= 1*dist; j += 1) {
+      if (i == 0 && j == 0) {
+        continue;
+      }
+      if (orig_i + i < 0 || orig_j + j < 0 ||
+        orig_i + i >= SECTION_DIMENSION || orig_j + j >= SECTION_DIMENSION){
+        continue;
+      }
+      nbrs.push([orig_i + i, orig_j + j, decay * (Math.abs(i) + Math.abs(j))])
+    }
+  }
+
+  return nbrs;
+}
+
+RULES = [
+  {
+    "target": "conviction",
+    "on": true,
+    "action": (i, j) => (DATA["conviction"][i][j]+1)%2
+  },
+  {
+    "target": "tolerance",
+    "on": true,
+    "action": (i, j) => zero_floor(DATA["tolerance"][i][j] + (Math.random() > 0.95 ? 0.05 : DATA["fear/rage"][i][j]))
+  },
+  {
+    "target": "tolerance",
+    "action": (i, j) => zero_floor(DATA["tolerance"][i][j] - DATA["fear/rage"][i][j]/2),
+    "on": true
+  },
+  {
+    "target": "fear/rage",
+    "action": (i, j) => Math.random() > 0.95 ? 1 : DATA["fear/rage"][i][j],
+    "on": true
+  },
+  {
+    "target": "fear/rage",
+    "action": (i, j) => {
+      nbrs = neighbors(i,j)
+      for (var ni in nbrs) {
+        //if (DATA["fear/rage"][i][j] > DATA["fear/rage"][nbr[0]][nbr[1]]){
+          // TODO separate prev and next state
+          nbr = nbrs[ni];
+          DATA["fear/rage"][nbr[0]][nbr[1]] = zero_floor(DATA["fear/rage"][i][j] / nbr[2] + DATA["fear/rage"][nbr[0]][nbr[1]]);
+        //}
+      }
+      return DATA["fear/rage"][i][j];
+    },
+    "on": false
+  }
+];
+
+// Set dynamically upon setup()
+CELL_SIZE = 0;
+
+
+function setup() {
+  createCanvas(600, 600);
+  CELL_SIZE = Math.floor(width/SECTIONS_CONSTANT/SECTION_DIMENSION);
+
+  frameRate(30);
+  background(255);
+  colorMode(RGB, 255, 255, 255);
+  smooth();
+  initialState();
+}
+
+function initialState() {
+
+  DATA = {}
+  for (var mask in MASKS_2x2) {
+    DATA[mask] = {};
+    for (var i = 0; i < SECTION_DIMENSION; i += 1) {
+      DATA[mask][i] = {};
+      for (var j = 0; j < SECTION_DIMENSION; j += 1) {
+        DATA[mask][i][j] = INITIAL[mask]();
+      }
+    }
+  }
+
+  for (var section in MASKS_2x2){
+    section_i = MASKS_2x2[section][0];
+    section_j = MASKS_2x2[section][1];
+
+    prev = DATA[section][0][0];
+    fill(COLOR_MAP[section](prev));
+
+    for (var i = 0; i < SECTION_DIMENSION; i += 1) {
+      for (var j = 0; j < SECTION_DIMENSION; j += 1) {   
+
+        if (prev != DATA[section][i][j]){
+          prev = DATA[section][i][j]
+          fill(COLOR_MAP[section](prev));
+        }
+
+        rect(i*CELL_SIZE + CELL_SIZE*SECTION_DIMENSION*section_i,
+             j*CELL_SIZE + CELL_SIZE*SECTION_DIMENSION*section_j,
+             CELL_SIZE, CELL_SIZE);
+      }
+    }
+  }
+  stroke(0);
+  line(CELL_SIZE*SECTION_DIMENSION, 0, CELL_SIZE*SECTION_DIMENSION, height);
+  line(0, CELL_SIZE*SECTION_DIMENSION, width, CELL_SIZE*SECTION_DIMENSION);
+}
+
+function run(n=100) {
+  for (var i=0; i<n; i++) {
+    calculateIncrement();
+  }
+}
+
+function calculateIncrement() {
+  for (r in RULES) {
+    rule = RULES[r];
+    if (!rule["on"]){
+      continue;
+    }
+    //console.log("Applying rule upon " + rule["target"])
+
+    for (var i = 0; i < SECTION_DIMENSION; i += 1) {
+      for (var j = 0; j < SECTION_DIMENSION; j += 1) {
+        // TODO separate prev and next state
+      }
+    }
+    for (var i = 0; i < SECTION_DIMENSION; i += 1) {
+      for (var j = 0; j < SECTION_DIMENSION; j += 1) {
+        DATA[rule["target"]][i][j] = rule["action"](i, j);
+        fill(COLOR_MAP[rule["target"]](DATA[rule["target"]][i][j]));
+        rect(i*CELL_SIZE + CELL_SIZE*SECTION_DIMENSION*MASKS_2x2[rule["target"]][0],
+             j*CELL_SIZE + CELL_SIZE*SECTION_DIMENSION*MASKS_2x2[rule["target"]][1],
+             CELL_SIZE, CELL_SIZE);
+      }
+    }
+  }
+}
+
+function colorCell(section, i, j) {
+
+  if (MASKS_2x2[section] === undefined) {
+    console.log("Unknown section: " + section);
+    return false;
+  }
+
+  if (DATA === undefined || DATA[section] === undefined ||DATA[section][i] === undefined || DATA[section][i][j] === undefined) {
+    console.log("Ok what r u talking about " + section + " " + i + " " + j);
+    return false;
+  }
+
+  fill(COLOR_MAP[section](DATA[section][i][j]));
+  rect(i*CELL_SIZE + CELL_SIZE*SECTION_DIMENSION*MASKS_2x2[section][0],
+       j*CELL_SIZE + CELL_SIZE*SECTION_DIMENSION*MASKS_2x2[section][1],
+       CELL_SIZE, CELL_SIZE);
+
+}
+
+function draw() { 
+  // TODO implement increment based on rules
+}
+
+function keyPressed() {
+  if (key == 'N') {
+    console.log("Begin Anew");
+    initialState();
+
+  } else if (key == " ") {
+    console.log("Pause/Unpause");
+  // TODO pause/unpause
+  }
+}
+function mousePressed() {
+  // TODO implement Acts of Godx
+  console.log(":o");
+}
+
+      </script>
+   </head>
+   <body>
+   </body>
+</html>
