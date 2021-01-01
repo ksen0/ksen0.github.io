@@ -14,6 +14,15 @@ body{
   font-family: monospace;
   padding:3px;
 }
+.topic {
+  position:relative;
+  left:-5px;
+  top:-5px;
+  background-color: #777;
+  color:white;
+  font-family: monospace;
+  padding:3px;
+}
 .main img{
   width:100%;
 }
