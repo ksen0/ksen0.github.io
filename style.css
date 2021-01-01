@@ -7,6 +7,16 @@ body{
   box-sizing:border-box;
 }
 
+.breadcrumb a {
+  display:block;
+  background-color: black;
+  color:white;
+  font-family: monospace;
+  padding:3px;
+}
+.main img{
+  width:100%;
+}
 .left {
   padding:20px;
   float:left;
