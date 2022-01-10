@@ -1,6 +1,6 @@
 body{
   width:100%;
-  max-width:1100px;
+  max-width:1300px;
   margin:auto;
 }
 * {
@@ -29,19 +29,26 @@ body{
 .left {
   padding:20px;
   float:left;
-  width:20%; /* The width is 20%, by default */
+  width:24%; /* The width is 30%, by default */
 }
 
 .main {
   padding:20px;
   float:left;
-  width:50%; /* The width is 60%, by default */
+  width:38%; /* The width is 35%, by default */
+}
+
+.diagram{
+  opacity: 0.5;
+}
+.diagram:hover{
+  opacity: 1;
 }
 
 .right {
   padding:20px;
   float:left;
-  width:30%; /* The width is 20%, by default */
+  width:38%; /* The width is 35%, by default */
 }
 
 /* Use a media query to add a break point at 800px: */
