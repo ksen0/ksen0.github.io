@@ -1,6 +1,8 @@
+
+
 <form name="contact" method="POST" data-netlify="true">
   <p>
-    <label>Your Name: <input type="text" name="name" /></label>   
+    <label>Your Name: <input type="text" name="name" /></label>
   </p>
   <p>
     <label>Your Email: <input type="email" name="email" /></label>
@@ -18,3 +20,22 @@
     <button type="submit">Send</button>
   </p>
 </form>
+
+
+<div onclick="doubleclick(this, function(){alert('single')}, function(){alert('double')})">click me</div>
+    <script>
+        function doubleclick(el, onsingle, ondouble) {
+            if (el.getAttribute("data-dblclick") == null) {
+                el.setAttribute("data-dblclick", 1);
+                setTimeout(function () {
+                    if (el.getAttribute("data-dblclick") == 1) {
+                        onsingle();
+                    }
+                    el.removeAttribute("data-dblclick");
+                }, 300);
+            } else {
+                el.removeAttribute("data-dblclick");
+                ondouble();
+            }
+        }
+    </script>
