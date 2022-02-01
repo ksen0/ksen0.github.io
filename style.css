@@ -14,14 +14,19 @@ body{
   font-family: monospace;
   padding:3px;
 }
-.topic {
+.topic, .type {
   position:relative;
-  left:-5px;
+  left:0px;
   top:-5px;
   background-color: #777;
   color:white;
   font-family: monospace;
   padding:3px;
+  margin:0px;
+  font-size: 10px;
+}
+.type{
+background-color: #333;
 }
 .main img{
   width:100%;
@@ -32,10 +37,18 @@ body{
   width:24%; /* The width is 30%, by default */
 }
 
+hr{
+  padding:30px;
+  background-color:#eee;
+  border:none;
+  margin-top:20px;
+  margin-bottom:20px;
+}
+
 .main {
   padding:20px;
   float:left;
-  width:38%; /* The width is 35%, by default */
+  width:48%; /* The width is 35%, by default */
 }
 
 .diagram{
@@ -48,7 +61,7 @@ body{
 .right {
   padding:20px;
   float:left;
-  width:38%; /* The width is 35%, by default */
+  width:28%; /* The width is 35%, by default */
 }
 
 /* Use a media query to add a break point at 800px: */
