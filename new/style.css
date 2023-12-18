@@ -2,6 +2,22 @@
     font-family: Coolvetica;
     src: url("coolvetica/coolvetica rg.otf") format("opentype");
 }
+@font-face {
+    font-family: Quicksand;
+    src: url("quicksand/Quicksand_Book.otf") format("opentype");
+}
+/*@font-face {
+    font-family: Quicksand;
+    src: url("quicksand/Quicksand_Dash.otf") format("opentype");
+  font-weight: lighter;
+  font-style: normal;
+}*/
+@font-face {
+    font-family: Quicksand;
+    src: url("quicksand/Quicksand_Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
 
 
 body{
@@ -9,11 +25,22 @@ body{
   width:100%;
   max-width:900px;
   margin:auto;
+  font-family: "Quicksand";
+  color:#555;
 }
 * {
   box-sizing:border-box;
 }
+ul {
+  list-style-type: circle;
+}
 
+strong{
+    color:#000;
+}
+a {
+  font-weight: bold;
+}
 .blurb {
   max-width:100%;
   padding:10px;
@@ -24,25 +51,15 @@ body{
   min-height:200px;
 }
 
-body p{
-  font-size: 15px;
+body p, li{
+  font-size: 16px;
+  line-height: 19px;
 }
 .blurb p{
   font-size: 12px;
+  line-height: 15px;
 }
 
-.a{
-  background-color: #F6F4F6; /*#AF9AB2;*/
-  color:#AF9AB2;
-}
-.b{
-  background-color: #F6F4F6; /*#9BC4BC;*/
-  color:#AF9AB2;
-}
-.c{
-  background-color: #F6F4F6; /*#F0B67F;*/
-  color:#AF9AB2;
-}
 .a:hover, .b:hover, .c:hover{
   background-color: #F6F4F6; /*#AF9AB2;*/
   color:#000;
@@ -72,49 +89,8 @@ h3{
   -webkit-text-stroke-color: #876E87;
   -webkit-text-fill-color: #fff;*/
 }
-
-.breadcrumb a {
-  display:block;
-  background-color: black;
-  color:white;
-  font-family: monospace;
-  padding:3px;
-}
-.topic, .type {
-  position:relative;
-  left:0px;
-  top:-5px;
-  background-color: #777;
-  color:white;
-  font-family: monospace;
-  padding:3px;
-  margin:0px;
-  font-size: 10px;
-}
-.type{
-background-color: #333;
-}
-.main img{
-  width:100%;
-}
-.left {
-  padding:20px;
-  float:left;
-  width:24%; /* The width is 30%, by default */
-}
-
-hr{
-  padding:30px;
-  background-color:#eee;
-  border:none;
-  margin-top:20px;
-  margin-bottom:20px;
-}
-
-.main {
-  padding:20px;
-  float:left;
-  width:48%; /* The width is 35%, by default */
+li{
+  margin-bottom:10px;
 }
 
 .diagram{
@@ -123,13 +99,6 @@ hr{
 .diagram:hover{
   opacity: 1;
 }
-
-.right {
-  padding:20px;
-  float:left;
-  width:28%; /* The width is 35%, by default */
-}
-
 /* Use a media query to add a break point at 800px: */
 @media screen and (max-width:800px) {
   .left, .main, .right {
