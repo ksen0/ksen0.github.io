@@ -41,6 +41,20 @@ strong{
 a {
   font-weight: bold;
 }
+
+input, textarea {
+  width:100%;
+  padding:8px;
+  font-family: "Quicksand";
+  border-radius: 5px;
+  border: 1px solid #555;
+}
+button {
+  font-family: Coolvetica;
+  font-size: 16px;
+  padding:8px;
+}
+
 .blurb {
   max-width:100%;
   padding:10px;
