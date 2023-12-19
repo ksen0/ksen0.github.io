@@ -3,6 +3,15 @@
 <head>
 <title>Kit Kuksenok, PhD</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <script src="https://www.google.com/recaptcha/api.js"></script>
+
+ <script>
+   function onSubmit(token) {
+     document.getElementById("demo-form").submit();
+   }
+ </script>
+
 <link rel="stylesheet" href="style.css"/>
 
 
@@ -42,7 +51,7 @@ I am also very interested in regulation around data and issues of data privacy o
   </ul>
 
 
-  <p style="clear:both">You can get in touch with me via <a href=https://www.linkedin.com/in/kuksenok>LinkedIn</a>.</p>
+  <p style="clear:both">You can get in touch with me via <a href=https://www.linkedin.com/in/kuksenok>LinkedIn</a>, or through the contact form below.</p>
 
   <h1>Artist</h1>
 
@@ -53,68 +62,39 @@ I am also very interested in regulation around data and issues of data privacy o
 
 
 <ul>
-  <li>Radical Imperfection in Self-Tracking</li>
-<li>Algorithmic Poetry of Fictional Robotics</li>
+  <li>Radical Imperfection in Self-Tracking (Wednesdays, TBA)</li>
+  <li>Algorithmic Poetry of Fictional Robotics (Tuesdays, TBA)</li>
 </ul>
 
   <p>In April 2023, I <a href=https://www.youtube.com/watch?v=GOxVOHVzAjU>presented my work on body data</a> at <a href=https://www.neme.org/projects/toolkit-of-care/data-for-care>Data for Care @ NeMe Arts Center</a>.  I use participatory performance, drawing, and movement to study how people encounter body data. This work, ongoing since 2008,  has included systematic self-reflection, such as through consumer self-tracking technologies; recently extending to digital surveillance of human bodies.</p>
 
-<!--<p>As a visual and performance artist, I work on body data, including systematic self-reflection, such as through consumer self-tracking technologies; but extending to topics related to digital surveillance of human bodies.</p>
-
-  <div class="blurb c" style="width:150px;height:370px">
-    
-    <!--
-    <p>Speculative Fiction.TBD coming up in 2023 I taught a class on worldbuilding in SF (spring 2023) and fictional robotics (fall 2023).</p>
-
-    <p>Body Data & Self-ReflectionTK coming u. In 2023 I taught a class on worldbuilding in SF (spring 2023) and fictional robotics (fall 2023).</p>
-    <p></p>
-  -->
-  <!--
-
-  <div class="blurb b" style="width:300px;height:370px">
-    <h3>Body Data (2008-2013)</h3
-    <p><a href=https://www.youtube.com/watch?v=GOxVOHVzAjU><img src="kit at neme.png" style="width:100%" alt="Photo of me at NeMe Data for Care Traing in 2023."></a></p>
-    <p>In April 2023, I <a href=https://www.youtube.com/watch?v=GOxVOHVzAjU>presented my work on body data</a> at <a href=https://www.neme.org/projects/toolkit-of-care/data-for-care>Data for Care @ NeMe Arts Center</a>.  I use participatory performance, drawing, and movement to study how people encounter body data. This work, ongoing since 2008,  has included systematic self-reflection, such as through consumer self-tracking technologies; recently extending to digital surveillance of human bodies.</p>
-</div>
-
-  <div class="blurb c" style="width:250px">
-  <p><img src="../kit/echoing_hills.png"  style="width:100%" alt="Photo of me and Elisa Lemma in the ZHdK Orgelsaal in 2022."></p>
-<p><small><em>Body Songs (2022)</em> was a performance co-presented with as part of <em>of the echoing hills</em> with Lili Huston-Herterich and Elisa Lemma at the School of Commons end of year show at the ZHdK Orgelsaal. The audience was invited to participate in a co-constructed rhythmic vocal composition exploring the physical, mental, or energetic shifts that occur within their/our bodies during a day, a month, or a year. Pictured: Kit Kuksenok (left) and Elisa Lemma on pipe-organ (right)</small></p>
-</div>
-<div style="clear:both"></div>
-
-  <div class="blurb c" style="width:300px">
-
-  <p><img src="../2021_feminist_futures.jpg" width="100%"><br><br><small>In May, 2021 I gave a talk on <strong>radical data practices</strong> at the <a href=https://www.feministfutureshack.org/>feminist futures hackathon</a>, presenting recent work from the <a href=http://databody.art>data/body</a> project.</small><br></p>
-</div>
-  <div class="blurb c" style="width:150px;height:370px">
-<p><a href="https://ksen0.github.io/do-the-thing/index.html"><img src="../0steps/2022 shouldido-v4.1.png"  class="diagram" style="width:100%" alt="Flowchart about making decisions."></a></p>
-    <p><a href="https://ksen0.github.io/do-the-thing/index.html">Should I Do The Thing? (2016-2021)</a> expresses as a diagram major life turning points; not really to make a decision, but to reveal the decision one already recognizes to be the right one.</p>
-  </div>
+<h1>Get in Touch</h1>
 
 
+<!-- Google reCAPTCHA https://developers.google.com/recaptcha/docs/v3 -->
 
-  <div class="blurb c" style="width:150px;height:370px">
-    <p><a href=https://vimeo.com/676209573/3e6384861c><img src="_sketchbook_cora_ef_hamilton2sm.jpg"  class="diagram" style="width:100%" alt="Photo of me holding my sketchbook"></a></p>
-    <p>As a visual artist, I draw with ink and watercolor, and incorporate painting and sketching with text in <a href=https://vimeo.com/676209573/3e6384861c>expressive journaling</a> as key media. Photo by Cora EF Hamilton (2019)</p>
-  </div>
+<form name="contact" method="POST" data-netlify="true">
 
--->
-<p style="clear:both;margin-bottom:100px">Last updated: Dec 2023.</p>
-<!--https://vimeo.com/manage/videos/676209573/3e6384861c links from cora image
-</div>
+  <p>
+    <label>Your Name:<br \><input type="text" name="name" /></label>
+  </p>
+  <p>
+    <label>Your Email:<br \><input type="email" name="email" /></label>
+  </p>
+  <p>
+    <label>Message:<br \><textarea name="message"></textarea></label>
+  </p>
+  <p>
+   <button type="submit">Send!</button>
+  <!-- <button class="g-recaptcha" 
+        data-sitekey="reCAPTCHA_site_key" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit</button> -->
+  </p>
+</form>
 
-  <h1 style="clear:both">Upcoming</h1>
+<p style="clear:both;margin-bottom:100px;margin-top:60px;float:right">Last updated: Dec 2023</p>
 
-  <p><small>Last Updated: Dec 2023</small></p>
-
-  <h2>POM Aachen 2024 Open Call</h2>
-
-  <p>Submissions now open for Politics of the Machines Aachen 2024 - lifelikeness & beyond! I am chairing the track <em>Body Imaginations,</em> focusing on mechanisms of care for the human body as a complex system. Abstract submission open until December 18th. In this track, we welcome both academic and artistic/experimental works. Learn more and submit <a href=https://www.pomconference.org/pom-aachen-2024/>here</a>.</p>
-
-  <h2>School of Machiens Courses 2024</h2>
-  <p>Coming Soon (Dates TBA): <em>Algorithmic Poetry of Fictional Robotics</em> course at the School of Machines, Making, and Make-Believe, co-taught with Mario Guzman; as well as an update of the <em>Radical Imperfection in Self-Tracking</em> course.</p>
--->
 
 </div>
 </body>
